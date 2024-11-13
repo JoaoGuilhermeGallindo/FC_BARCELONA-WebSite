@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    background: linear-gradient(to right, #001abc 49.3%, #a5004a 50%); /* Define o gradiente, dividindo ao meio */
+}
+
+.titulo {
+justify-content: center;
+display: flex;
+margin-top: 20px;
+
+}
+  
+
+  .titulo h1 {
+    margin-top: 20px;
+    color: rgb(255, 251, 4);
+    padding: 10px;
+    position: relative;          
+    background-color: rgb(16, 16, 109);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 450px;
+  }
+  
+
+  .players-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 4500px;
+    width: 1360px;
+    margin: 2rem;
+}
+
+.player-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-right: -7px;
+}
+
+
+.player-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.player-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+}
+
+.player-info:hover{
+    border-color: blue;
+    transform: scale(1.3);
+    transition: transform 0.2s ease;
+    
+}
+.player-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.player-info p {
+    margin: 5px 0;
+}
+
+.number {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.sub-titulo h1 {
+align-items: center;
+display: flex;
+justify-content: center;
+margin-top: 50px;
+color: black;
+}
+
+.container2 {
+    background-color: aliceblue;
+    border-radius: 30px;
+    width: 90%; /* Ajusta a largura para 90% da largura da tela */
+    max-width: 1433px; /* Define um valor máximo para a largura */
+    justify-content: center;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 7px;
+    margin-top: 50px; /* Distância da parte superior */
+    margin-bottom: 45px; /* Distância da parte inferior */
+    position: relative;
+}
+
+/* Para telas pequenas (smartphones em modo retrato) */
+@media (max-width: 600px) {
+    .container2 {
+        width: 95%; /* Aumenta a largura para 95% da tela */
+        padding: 10px; /* Ajusta o padding */
+        margin-top: 30px; /* Ajusta a margem superior */
+    }
+}
+
+/* Para tablets em modo paisagem e smartphones em modo paisagem */
+@media (max-width: 768px) {
+    .container2 {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        padding: 10px;
+        margin-top: 40px;
+    }
+}
+
+/* Para telas de tamanho médio (como tablets em modo retrato ou pequenas telas de laptop) */
+@media (max-width: 1024px) {
+    .container2 {
+        width: 85%; /* Ajusta a largura para 85% da tela */
+        padding: 15px; /* Ajusta o padding */
+        margin-top: 50px;
+    }
+}
+
+.staff-table {
+    width: 2000px; /* Ajuste a largura conforme necessário */
+    max-width: 2000px;
+    border-collapse: collapse;
+    display: grid;
+    text-align: center;
+    align-items: flex-end;
+    justify-content: center; /* Alinha o conteúdo dentro da grid */
+    margin-left: auto; /* Alinha a div à direita */
+    margin-right: 0; /* Garante que não haverá espaço à direita */
+}
+
+.staff-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #c20a0a;
+    border-bottom: 1px solid #ddd;
+    margin-right: 20px;
+}
+
+.staff-row:nth-child(even) {
+    background-color: #0a0097;
+}
+
+.staff-position {
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 60%;
+    font-family: 'Poppins', 'Arial';
+    color: rgb(236, 236, 0);
+}
+
+.staff-name {
+    text-align: center;
+    width: 40%;
+    font-family: 'Poppins', 'Arial';
+    text-align: center;
+    margin-right: 100px;
+    color: white;
+}
+
+.equipe-tecnica {
+    display: flex ; /* Usa flexbox para alinhar os filhos lado a lado */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.equipe-tecnica > div {
+    flex: 1; /* Faz com que as divs internas se estiquem igualmente para preencher o espaço */
+    margin: 10px; /* Adiciona um pequeno espaçamento entre as divs */
+}
+
+.tecnico-grid {
+    gap: 20px;
+    max-width: 1200px;
+    margin: 2rem;
+    padding: 0 40px;
+    width: 1100px;
+}

@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("https://store.fcbarcelona.com/cdn/shop/files/Main-Banner-Xmas-Jumpers-3200x2000px.jpg?v=1730904804&width=1780");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden; /* Evita o overflow horizontal */
+}
+
+.loja h2 {
+    background-color: #0A2A66;
+    font-size: 2.7rem;
+    border-radius: 20px;
+    width: 30vw;
+    color: rgb(46, 185, 209);
+    text-align: center;
+    height: 10vh;
+    padding-top: 18.5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 3px solid rgb(209, 46, 46); /* Adiciona uma borda ao redor do texto */
+}
+
+.loja {
+    width: 100%; /* Ajusta para evitar overflow horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.itens-loja {
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.itens-loja .produto {
+    border-radius: 10px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Para que a borda fique aplicada à imagem e às infos */
+}
+
+.itens-loja .produto:hover {
+    transform: scale(1.05);
+}
+
+.itens-loja img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.itens-loja .infos {
+    background-color: rgb(228, 207, 207);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px; /* Ajusta apenas as bordas inferiores */
+    max-height: 1000px;
+    height: 200px;
+    padding-bottom: 0.5px;
+}
+
+.itens-loja .infos h3 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.itens-loja .infos h4 {
+    font-size: 1.5rem;
+    color: rgb(0, 134, 0);
+    margin-top: 0.5rem;
+}
+
+.adicionar-carrinho {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: rgb(231, 46, 33);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    
+}
+
+.adicionar-carrinho:hover {
+    background-color: rgb(26, 139, 64);
+    color: black;
+}
+
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização da barra superior */
+.topoo {
+    width: 100%; /* A largura será sempre 100% da tela */
+    background-color: #0A2A66;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura total */
+}
+
+/* Para telas pequenas (smartphones em modo retrato) */
+@media (max-width: 600px) {
+    .topoo {
+        padding: 12px; /* Ajusta o padding para telas pequenas */
+        flex-direction: column; /* Empilha os itens em coluna se necessário */
+    }
+}
+
+/* Para tablets em modo paisagem e smartphones em modo paisagem */
+@media (max-width: 768px) {
+    .topoo {
+        padding: 15px; /* Aumenta o padding para telas médias */
+    }
+}
+
+/* Para telas de tamanho médio (como tablets em modo retrato ou pequenas telas de laptop) */
+@media (max-width: 1024px) {
+    .topoo {
+        padding: 20px; /* Ajusta o padding para telas maiores */
+    }
+}
+
+.cabeçarioo {
+    width: 100%; /* A largura será sempre 100% da tela */
+    max-width: 1200px; /* Limita a largura máxima a 1200px */
+    display: flex;
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: space-between; /* Garante que os itens se distribuam ao longo da largura disponível */
+    padding: 0 15px; /* Adiciona um padding nas laterais */
+    box-sizing: border-box; /* Para garantir que o padding não ultrapasse a largura definida */
+}
+
+/* Para telas pequenas (smartphones em modo retrato) */
+@media (max-width: 600px) {
+    .cabeçarioo {
+        flex-direction: column; /* Empilha os itens na coluna para telas pequenas */
+        align-items: flex-start; /* Alinha os itens ao início da coluna */
+        padding: 10px; /* Ajusta o padding para telas pequenas */
+    }
+}
+
+/* Para tablets em modo paisagem e smartphones em modo paisagem */
+@media (max-width: 768px) {
+    .cabeçarioo {
+        flex-direction: column; /* Empilha os itens em coluna */
+        align-items: flex-start; /* Alinha os itens ao início da coluna */
+        padding: 15px; /* Ajusta o padding */
+    }
+}
+
+/* Para telas de tamanho médio (como tablets em modo retrato ou pequenas telas de laptop) */
+@media (max-width: 1024px) {
+    .cabeçarioo {
+        padding: 20px; /* Ajusta o padding para telas maiores */
+        justify-content: space-between; /* Mantém a distribuição dos itens */
+    }
+}
+
+.topoo {
+    position: sticky;
+    top: 0;  /* Fixa o topo na parte superior da página */
+    z-index: 1000; /* Garante que o topo ficará sobre outros conteúdos */
+ 
+}
+
+.cabeçarioo .img {
+    height: 40px;
+    margin-left: -330px;
+    /* Deixa a imagem à esquerda */
+}
+
+.linkss {
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza os links horizontalmente */
+    margin-left: 1540px;
+}
+
+.linkss a {
+    color: yellow;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.img-carrinho {
+    height: 40px;
+    margin-left: 23px;
+   
+}
+

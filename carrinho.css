@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://store.fcbarcelona.com/cdn/shop/collections/regala_fcb_secret_santa_01_mid_res_09e057db-d267-4504-9404-b9e078bd7aa4.jpg?v=1706114877&width=1920");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main {
+    flex: 1; /* O conteúdo principal expande para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item {
+    border: 1px solid #aa1b1b;
+    padding: 10px;
+    background-color: #3f7eb1;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.87);
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    font-weight: bold;
+}
+button {
+    background-color: #aa1c1c;
+    margin-top: 13px;
+    color: rgb(107, 215, 241);
+    font-family: 'Poppins', 'Arial';
+    padding: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.finalizar-compra {
+    width: 170px;
+    display: flex; /* Adiciona flex para centralizar */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center;
+    margin: 0 auto; /* Centraliza no contêiner pai */
+    border-radius: 20px;
+    border: 3px solid #d80000; 
+  
+}
+
+.div-finalizar-compra {
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 150px;
+}
+
+button:hover {
+    background-color: rgb(28, 151, 69);
+    color: black;
+    cursor: pointer;
+}
+.total {
+    font-weight: bold;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #3f7eb1;
+    width: 200px;
+    border-radius: 10px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    padding: 15px;
+}
+
+.total-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer__centenary-imagee img {
+    background-size: cover;       /* Garante que a imagem cubra toda a área do contêiner */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    width: 100%;                  /* Faz a imagem ocupar 100% da largura do contêiner */
+    height: auto;                 /* Mantém a proporção da imagem */
+    display: block;               /* Remove qualquer espaço indesejado abaixo da imagem */
+  }
+  
+  @media (max-width: 768px) {
+    .footer__centenary-imagee img {
+      width: 100%;                /* Em telas menores, a imagem ocupa 100% da largura da tela */
+      height: auto;               /* Mantém a altura proporcional */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer__centenary-imagee img {
+      width: 100%;                /* Em telas muito pequenas, a imagem continua ocupando toda a largura */
+      height: auto;               /* Mantém a proporção */
+    }
+  }
+
+.footer__centenary-imagee {
+    position: fixed; /* Fixar ao final da página */
+    bottom: 0; /* Posicionar no final */
+    padding-bottom: 24px;
+   
+}
+
+.desenvolvido-porr {
+    background-color: #000;
+    align-items: center;
+    color: #0168ee;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    width: 100%;
+    position: fixed; /* Fixa o rodapé ao final da página */
+    bottom: 0;
+}
+
+.desenvolvido-porr h5 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+

@@ -1,0 +1,537 @@
+body {
+  background-color: #0168ee;
+  margin: 0;
+  padding: 0;
+}
+
+.topo {
+  position: sticky;
+  top: 0;  /* Fixa o topo na parte superior da página */
+  z-index: 1000; /* Garante que o topo ficará sobre outros conteúdos */
+  background-color: white; /* Isso pode ser útil para que o fundo da barra do topo não desapareça */
+}
+
+.cabeçario {
+  width: 100vw;           /* A largura da imagem será 80% da largura da tela */
+  height: auto;          /* Mantém a proporção da imagem */
+  max-width: 100000px;
+}
+h1 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem; /* Tamanho relativo para responsividade */
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin: 0;
+}
+
+.links-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(16, 16, 109);
+  width: 100%;               /* A largura ocupará 100% do contêiner pai */
+  padding: 8px;
+  position: relative;
+  overflow: visible;         /* Permite que a imagem ultrapasse os limites do contêiner */
+  height: auto;              /* Mantém a proporção do conteúdo dentro */
+  max-width: 100%;           /* Garante que não ultrapasse a largura da tela */
+  box-sizing: border-box;    /* Inclui padding e bordas no cálculo da largura total */
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .links-img {
+    padding: 5px;  /* Ajuste o padding para dispositivos menores */
+    gap: 5px;      /* Diminui o espaçamento entre os itens */
+  }
+}
+
+@media (max-width: 480px) {
+  .links-img {
+    padding: 3px;  /* Reduz ainda mais o padding para telas pequenas */
+    gap: 3px;      /* Diminui ainda mais o espaçamento */
+  }
+}
+
+.links {
+  gap: 25px;
+  display: flex;
+  margin-left: 20px;
+  
+}
+
+.links-img img {
+  width: 80px;
+  height: auto;
+  margin-left: 10px;
+  position: relative;
+  margin-top: -20px;  /* Faz a imagem ultrapassar o topo */
+  margin-bottom: -20px; /* Faz a imagem ultrapassar o fundo */
+  z-index: 10; /* Garante que a imagem fique sobre o fundo */
+}
+
+.foto-principal {
+  display: flex;         /* Define o contêiner como flex */
+  flex-wrap: wrap;       /* Permite que os itens quebrem linha quando necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center;   /* Alinha os itens verticalmente no centro */           /* Adiciona espaço entre os itens, se houver mais de um */
+}
+
+
+.foto-principal img {
+  width: 110vw;           /* A largura da imagem será 80% da largura da tela */
+  height: auto;          /* Mantém a proporção da imagem */
+  max-width: 100000px;
+}
+
+section.parcerias {
+  background-color: #0168ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas em telas menores */
+  padding: 20px;
+}
+
+.parcerias h3 {
+  color: yellow;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+
+.linha-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* Espaço entre as linhas e o texto */
+  margin: 20px 0; /* Espaço acima e abaixo da seção */
+}
+
+.linha-titulo .linha {
+  width: 1552px; /* Largura das linhas */
+  height: 2px;
+  background-color: yellow;
+}
+
+
+.linha {
+  width: 1000px;
+  height: 2px;
+  background-color: yellow;
+}
+
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+.img-containerr {
+  position: relative;
+  display: inline-block;
+}
+
+
+.img-container img {
+  width: 180px;      /* Largura fixa de 200px */
+  height: auto;     /* Altura fixa de 200px */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  transition: transform 0.3s ease; /* Transição de zoom */
+  vertical-align: middle; /* Alinha as imagens verticalmente */
+}
+.img-containerr img {
+  width: 100px;      /* Largura fixa de 200px */
+  height: auto;     /* Altura fixa de 200px */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  transition: transform 0.3s ease; /* Transição de zoom */
+  vertical-align: middle; /* Alinha as imagens verticalmente */
+}
+
+
+
+.img-container:hover img {
+  transform: scale(1.05); /* Efeito de zoom suave na imagem */
+}
+.img-containerr:hover img {
+  transform: scale(1.05); /* Efeito de zoom suave na imagem */
+}
+.img-container:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Começa do centro */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  bottom: -30px; /* Ajusta a distância da linha para baixo da imagem */
+  height: 3px;
+  width: 0; /* Inicialmente invisível */
+  background-color: yellow; /* Cor da linha */
+  transition: width 0.3s ease, opacity 0.3s ease; /* Suaviza a largura e opacidade */
+  opacity: 0;
+}
+
+.img-containerr:hover::after {
+  width: 100%; /* Expande para a largura total ao passar o mouse */
+  opacity: 1;
+}
+.img-containerr:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Começa do centro */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  bottom: -30px; /* Ajusta a distância da linha para baixo da imagem */
+  height: 3px;
+  width: 0; /* Inicialmente invisível */
+  background-color: yellow; /* Cor da linha */
+  transition: width 0.3s ease, opacity 0.3s ease; /* Suaviza a largura e opacidade */
+  opacity: 0;
+}
+
+.img-container:hover::after {
+  width: 100%; /* Expande para a largura total ao passar o mouse */
+  opacity: 1;
+}
+.img-containerr:hover::after {
+  width: 100%; /* Expande para a largura total ao passar o mouse */
+  opacity: 1;
+}
+
+.titulo-linha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  text-align: center;
+  color: aliceblue;
+  font-size: 1.5rem;
+  margin-top: 70px;
+}
+
+/* Layout responsivo para redes sociais */
+.container-geral {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.face, .youtube, .insta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* Remover sublinhado */
+}
+
+.face { background-color: #0a3975; }
+.youtube { background-color: crimson; }
+.insta { background-color: coral; }
+
+.face img, .youtube img, .insta img {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h6 {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  text-decoration: none; /* Remover sublinhado */
+}
+
+.face:hover, .youtube:hover, .insta:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.content-hero-featured__title {
+  color: #fff;
+  font-family: fcb-condensed-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  max-width: 100%;
+  text-decoration: none; /* Remover sublinhado */
+}
+
+.noticias {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.footer__centenary-image img {
+  background-size: cover;       /* Garante que a imagem cubra toda a área do contêiner */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  width: 100%;                  /* Faz a imagem ocupar 100% da largura do contêiner */
+  height: auto;                 /* Mantém a proporção da imagem */
+  display: block;               /* Remove qualquer espaço indesejado abaixo da imagem */
+}
+
+@media (max-width: 768px) {
+  .footer__centenary-image img {
+    width: 100%;                /* Em telas menores, a imagem ocupa 100% da largura da tela */
+    height: auto;               /* Mantém a altura proporcional */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__centenary-image img {
+    width: 100%;                /* Em telas muito pequenas, a imagem continua ocupando toda a largura */
+    height: auto;               /* Mantém a proporção */
+  }
+}
+
+/* Links gerais - remover sublinhado */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+      text-decoration: none; /* Remover sublinhado */
+  }
+
+  .parcerias .linha {
+      height: 50px;
+  }
+
+  .container-geral {
+      flex-direction: column;
+  }
+
+  .face, .youtube, .insta {
+      width: 90%;
+      max-width: 150px;
+  }
+
+  .content-hero-featured__title {
+      font-size: 4rem;
+      line-height: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.5rem;
+      text-decoration: none; /* Remover sublinhado */
+  }
+
+  h4 {
+      font-size: 1.2rem;
+      text-decoration: none; /* Remover sublinhado */
+  }
+
+  .links-img img {
+      width: 50px;
+  }
+
+  .parcerias img {
+      max-width: 100%;
+  }
+
+  .face, .youtube, .insta {
+      width: 80%;
+  }
+
+  .content-hero-featured__title {
+      font-size: 3rem;
+      line-height: 2.5rem;
+  }
+}
+
+
+.desenvolvido-por {
+  background-color: #000;
+  align-items: center;
+  color: #0168ee;
+  text-align: center;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+}
+
+.desenvolvido-por h5 {
+  font-size: 16px; /* Tamanho do texto */
+  color: #ffffff; /* Cor do texto */
+  font-weight: 400; /* Peso da fonte */
+  font-family: 'Poppins', sans-serif;
+}
+
+.cabeçario {
+  display: flex;
+  justify-content: space-between; /* Coloca o h1 e o áudio em lados opostos */
+  align-items: center; /* Alinha os elementos ao centro verticalmente */
+  margin-top: 10px;
+  background-color: #0058ca;
+  margin: 0;
+  padding: 4px;
+}
+
+.cabeçario h1 {
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  flex: 1; /* Ocupa uma coluna */
+  margin-left: 10px;
+}
+/* Estilo para o cabeçalho h4 */
+.cabeçario h4 {
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  flex: 1; /* Ocupa uma coluna */
+  margin-left: 44px;
+  margin-left: 300px; /* Este valor está sendo sobrescrito */
+}
+
+/* Responsividade para o cabeçalho h4 */
+@media (max-width: 768px) {
+  .cabeçario h4 {
+    font-size: 20px;      /* Diminui o tamanho da fonte em telas menores */
+    margin-left: 20px;    /* Reduz a margem esquerda em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .cabeçario h4 {
+    font-size: 18px;      /* Reduz ainda mais o tamanho da fonte em telas pequenas */
+    margin-left: 10px;    /* Ajusta a margem esquerda para evitar sobrecarga */
+  }
+}
+
+/* Estilo para o contêiner do player de áudio */
+.audio-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  flex: 1; /* Ocupa uma coluna */
+  justify-content: flex-end; /* Alinha o player à direita dentro da coluna */
+  margin-right: 30px;
+}
+
+/* Responsividade para o áudio-container */
+@media (max-width: 768px) {
+  .audio-container {
+    margin-right: 20px;  /* Diminui a margem à direita em telas menores */
+    padding: 8px;        /* Ajusta o padding para dispositivos menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .audio-container {
+    margin-right: 10px;  /* Ajusta ainda mais a margem direita para telas pequenas */
+    padding: 10px;       /* Aumenta o padding para melhorar o espaço interno */
+    justify-content: center; /* Centraliza o player em telas muito pequenas */
+  }
+}
+
+
+.hino {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se reorganizem em linhas ao reduzir a tela */
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1a1b41;
+  justify-content: space-around;
+}
+
+.card {
+  background: url("https://www.fcbarcelona.com/resources/v2.91.2-6476/i/bg-elements/horizontal-flash-mobile.jpg");
+  background-size: cover;
+  height: 80px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffcc00;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+  font-size: 2.5rem;
+  font-weight: 750;
+}
+
+.card p {
+ text-shadow: 
+        -1px -1px 0 #000,  /* Sombra superior esquerda */
+        1px -1px 0 #000,   /* Sombra superior direita */
+        -1px 1px 0 #000,   /* Sombra inferior esquerda */
+        1px 1px 0 #000;    /* Sombra inferior direita */
+}
+.card img {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 8px; /* Espaçamento abaixo da imagem */
+}
+
+.card p:first-of-type {
+  font-size: 14px;
+}
+
+.card h1 {
+  font-size: 32px;
+  margin: 5px 0;
+}
+
+.card p:last-of-type {
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .card {
+      width: 100%; /* Cards ocupam a largura total em telas pequenas */
+      height: auto;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 1.8rem;
+  }
+}
+
+.links img {
+  margin-left: 1500px;
+}
