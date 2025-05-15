@@ -25,16 +25,97 @@ margin-top: 20px;
     text-align: center;
     width: 450px;
   }
-  
-
-  .players-grid {
+  /* Layout responsivo para os cards de jogadores */
+.players-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    max-width: 4500px;
-    width: 1360px;
-    margin: 2rem;
+    width: 100%; /* ✅ Responsivo */
+    max-width: 1200px; 
+    margin: 2rem auto; /* centraliza */
 }
+
+/* Media query para tablets */
+@media (max-width: 1024px) {
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+/* Media query para celulares */
+@media (max-width: 768px) {
+    .players-grid {
+        grid-template-columns: 1fr; /* Uma coluna apenas */
+        width: 90%;
+        margin: 1rem auto;
+        gap: 15px;
+    }
+    
+    .player-card {
+        margin-right: 0;
+        max-width: 300px;
+        margin: 0 auto; /* Centraliza o card */
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .players-grid {
+        width: 95%;
+        gap: 10px;
+    }
+    
+    .player-info {
+        padding: 8px;
+    }
+    
+    .player-info h3 {
+        font-size: 1em;
+    }
+    
+    .player-info p {
+        font-size: 0.9em;
+    }
+}
+
+/* Ajustes para a equipe técnica em mobile */
+@media (max-width: 768px) {
+      .equipe-tecnica {
+        flex-direction: column;
+        align-items: center; /* Garante centralização vertical */
+    }
+
+    .tecnico-grid {
+        display: flex;               /* ✅ Ativa flexbox */
+        justify-content: center;     /* ✅ Centraliza horizontalmente */
+        align-items: center;         /* ✅ Centraliza verticalmente (se necessário) */
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        margin: 2rem auto;           /* ✅ Centraliza o grid */
+    }
+    
+    .staff-table {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem auto;
+    }
+    
+    .staff-row {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .staff-position, .staff-name {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
 
 .player-card {
     position: relative;
@@ -44,6 +125,7 @@ margin-top: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     margin-right: -7px;
+    flex-wrap: wrap;
 }
 
 
@@ -102,6 +184,7 @@ color: black;
     margin-top: 50px; /* Distância da parte superior */
     margin-bottom: 45px; /* Distância da parte inferior */
     position: relative;
+    
 }
 
 /* Para telas pequenas (smartphones em modo retrato) */
@@ -141,6 +224,8 @@ color: black;
     justify-content: center; /* Alinha o conteúdo dentro da grid */
     margin-left: auto; /* Alinha a div à direita */
     margin-right: 0; /* Garante que não haverá espaço à direita */
+    width: 100%; /* ✅ Responsivo */
+    max-width: 1200px; 
 }
 
 .staff-row {
@@ -189,5 +274,6 @@ color: black;
     max-width: 1200px;
     margin: 2rem;
     padding: 0 40px;
-    width: 1100px;
+    width: 100%; /* ✅ Responsivo */
+    max-width: 1200px; 
 }
