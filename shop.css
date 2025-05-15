@@ -161,6 +161,7 @@ body {
     justify-content: space-between; /* Garante que os itens se distribuam ao longo da largura disponível */
     padding: 0 15px; /* Adiciona um padding nas laterais */
     box-sizing: border-box; /* Para garantir que o padding não ultrapasse a largura definida */
+    justify-content: center;
 }
 
 /* Para telas pequenas (smartphones em modo retrato) */
@@ -209,7 +210,7 @@ body {
     justify-content: center;
     align-items: center;
     /* Centraliza os links horizontalmente */
-    margin-left: 1540px;
+  
 }
 
 .linkss a {
@@ -225,3 +226,6 @@ body {
    
 }
 
+.img {
+    margin-right: 30px;
+}
